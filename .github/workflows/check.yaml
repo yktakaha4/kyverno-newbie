@@ -1,0 +1,17 @@
+name: check
+
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: kyverno/action-install-cli@v0.2.0
+        with:
+          release: 'v1.11.0'
+
+      - run: kyverno version
+
+      - run: kyverno apply policies/ -r manifests/*
