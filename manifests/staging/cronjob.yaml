@@ -10,7 +10,7 @@ spec:
         spec:
           containers:
           - name: django-app-cronjob
-            image: your-django-app-cronjob-image:latest
+            image: your-django-app-cronjob-image:v1
             args:
             - python
             - manage.py
