@@ -10,9 +10,11 @@ resources:
 results:
   - policy: disallow-latest-tag
     rule: require-image-tag
+    resource: django-app
     kind: Deployment
     result: pass
   - policy: disallow-latest-tag
     rule: validate-image-tag
+    resource: django-app
     kind: Deployment
     result: pass
