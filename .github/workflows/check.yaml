@@ -15,7 +15,7 @@ jobs:
 
       - run: kyverno version
 
-      - run: kyverno apply policies/ -r manifests/*
+      - run: kyverno apply policies/ -r manifests/* --detailed-results
 
   test:
     runs-on: ubuntu-22.04
