@@ -16,7 +16,7 @@ spec:
         runAsNonRoot: true
       containers:
       - name: django-app
-        image: your-django-app-image:v1
+        image: your-django-app-image
         ports:
         - containerPort: 8000
         resources:
